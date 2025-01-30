@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Lista de Episodios</h2>
+
+  <div class="episode-grid">
+    <div *ngFor="let episode of paginatedEpisodes">
+      <h3>{{ episode.name }}</h3>
+      <p>📅 <strong>Emitido el:</strong> {{ episode.air_Date }}</p>
+      <button class="detail-btn" (click)="goToEpisodeDetail(episode.id)">Ver detalle</button>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <button (click)="episodeService.prevPage()" [disabled]="episodeService.currentPage() === 1">⬅ Anterior</button>
+    <span>Página {{ episodeService.currentPage() }} de {{ episodeService.totalPages() }}</span>
+    <button (click)="episodeService.nextPage()" [disabled]="episodeService.currentPage() === episodeService.totalPages()">Siguiente ➡</button>
+  </div>
+</div>

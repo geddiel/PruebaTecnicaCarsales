@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>{{ episode?.name }}</h2>
+
+  <h3>Personajes</h3>
+  <div class="character-grid">
+    <div *ngFor="let character of characters" class="character-card">
+      <img [src]="character.image" class="character-img">
+      <h5>{{ character.name }}</h5>
+      <p>{{ character.species }} - {{ character.status }}</p>
+    </div>
+  </div>
+
+  <button class="back-btn" (click)="goBack()">⬅ Volver</button>
+</div>
