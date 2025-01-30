@@ -26,4 +26,4 @@ Este proyecto consiste en un **backend en .NET** y un **frontend en Angular** pa
 ### 1️⃣ Clonar el Repositorio
 ```bash
 git clone https://github.com/tuusuario/PruebaTecnicaCarsales.git
-cd RickAndMortyApp
+cd PruebaTecnicaCarsales
