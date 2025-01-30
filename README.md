@@ -1,4 +1,3 @@
-﻿# Rick and Morty Episodes API & Frontend
 # Rick and Morty Episodes API & Frontend 🛸
 
 ¡Bienvenido a la prueba técnica de **Rick and Morty**! 🚀  
