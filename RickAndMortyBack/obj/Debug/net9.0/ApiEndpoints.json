@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "RickAndMortyBack.Controllers.EpisodesController",
+    "Method": "GetEpisodes",
+    "RelativePath": "api/episodes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RickAndMortyBack.Controllers.EpisodesController",
+    "Method": "GetEpisodeDetail",
+    "RelativePath": "api/episodes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
