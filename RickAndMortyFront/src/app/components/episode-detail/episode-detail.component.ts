@@ -14,17 +14,15 @@ export class EpisodeDetailComponent implements OnInit {
   episode: any;
   characters: any[] = [];
 
-  constructor(private route: ActivatedRoute, private router: Router, private episodeService: EpisodeService) {}
+  constructor(private route: ActivatedRoute, private router: Router, public episodeService: EpisodeService) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      this.episodeService.getEpisodeDetail(parseInt(id)).subscribe((data: any) => {
-        this.episode = data.episode;
-        this.characters = data.characters;
-      });
+      this.episodeService.getEpisodeDetail(parseInt(id));
     }
   }
+
 
   goBack(): void {
     this.router.navigate(['/']);

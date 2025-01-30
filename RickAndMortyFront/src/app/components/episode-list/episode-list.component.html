@@ -2,7 +2,7 @@
   <h2>Lista de Episodios</h2>
 
   <div class="episode-grid">
-    <div *ngFor="let episode of paginatedEpisodes">
+    <div *ngFor="let episode of paginatedEpisodes" class="episode-card">
       <h3>{{ episode.name }}</h3>
       <p>📅 <strong>Emitido el:</strong> {{ episode.air_Date }}</p>
       <button class="detail-btn" (click)="goToEpisodeDetail(episode.id)">Ver detalle</button>

@@ -11,6 +11,8 @@ export class EpisodeService {
   episodes = signal<Episode[]>([]);
   currentPage = signal<number>(1);
   totalPages = signal<number>(1);
+  episodeDetail = signal<Episode | null>(null);
+  characters = signal<Character[]>([]);
   itemsPerPage = 9;
 
   constructor(private http: HttpClient) {
@@ -46,8 +48,11 @@ export class EpisodeService {
   }
 
   getEpisodeDetail(id: number) {
-    return this.http.get<{ episode: Episode; characters: Character[] }>(
+    this.http.get<{ episode: Episode; characters: Character[] }>(
       `${environment.apiUrl}/episodes/${id}`
-    );
+    ).subscribe(response => {
+      this.episodeDetail.set(response.episode);
+      this.characters.set(response.characters);
+    });
   }
 }
